@@ -8,10 +8,11 @@ import java.awt.*;
  */
 public class Brick extends Rectangle {
 
-    public Brick(double xpos, double ypos, double bHeight, double bWidth, Color col){
+    public Brick(double xpos, double ypos, double bHeight, double bWidth, Color col) {
         super(xpos, ypos, bWidth, bHeight);
         setFilled(true);
         setFillColor(col);
-        setStrokeColor(Color.white);
     }
+
+
 }

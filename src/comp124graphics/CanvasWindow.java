@@ -14,7 +14,7 @@ public class CanvasWindow extends JPanel implements GraphicsObserver{
     /**
      * Window frame
      */
-    private JFrame windowFrame;
+    protected JFrame windowFrame;
 
     /**
      * Holds the objects to be drawn in calls to paintComponent

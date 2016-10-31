@@ -9,11 +9,12 @@ import java.awt.*;
 public class BrickWall extends GraphicsGroup{
     private double xpos;
     private double ypos;
-    private double BRICK_HEIGHT = 10;
-    private double BRICK_WIDTH = 100;
+    private int BRICK_HEIGHT = 20;
+    private int BRICK_WIDTH = 50;
+    private int numRows  = 10;
 
-    private double numOfBrick = BreakoutProgram.CANVAS_WIDTH / BRICK_WIDTH;
-    private int numOfRows = 10;
+    private int numOfBrick =  BreakoutProgram.CANVAS_WIDTH / BRICK_WIDTH;
+
     private Brick brick1;
 
     public BrickWall(double xpos, double ypos){
@@ -26,9 +27,11 @@ public class BrickWall extends GraphicsGroup{
         for (int i = 0; i < numOfBrick; i++){
             brick1 = new Brick(xpos, ypos, BRICK_HEIGHT, BRICK_WIDTH, col);
             add(brick1);
-            xpos = xpos + BRICK_WIDTH+2; //change the xpos
+            xpos = xpos + BRICK_WIDTH+ 3; //change the xpos
+
+
         }
-        ypos = ypos + BRICK_HEIGHT+ 2;
+        ypos = ypos + BRICK_HEIGHT+ 3;
         xpos = 0;
     }
 
@@ -44,6 +47,11 @@ public class BrickWall extends GraphicsGroup{
         drawRow(Color.blue);
         drawRow(Color.blue);
 
+    }
+
+    public int getNumOfBricks(){
+        int num = numOfBrick * numRows;
+        return num;
     }
 }
 
