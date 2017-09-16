@@ -1,9 +1,9 @@
 Breakout!
 ==========================
 
-For this homework assignment, you will write a program to play the classic arcade game of Breakout, which
+A program based on the classic arcade game of Breakout, which
 was developed in 1976 by Steve Wozniak, who would later become one of the founders 
-of Apple. In Breakout, your goal is to clear a collection of bricks by hitting each of them with 
+of Apple. In Breakout, the goal is to clear a collection of bricks by hitting each of them with 
 a bouncing ball.
 
 The initial configuration of the Breakout game appears in the left image below. The colored 
@@ -34,23 +34,3 @@ After all the bricks in a particular column have been cleared, a path will open 
 delightful situation occurs, the ball will often bounce back and forth several times between the top wall and the upper 
 line of bricks without the user ever having to worry about hitting the ball with the paddle. This condition is the 
 reward for "breaking out" and gives meaning to the name of the game.
-
-It is important to note that, even though breaking out is a very exciting part of the player's experience,
-you don't have to do anything special in your program to make it happen. The game is operated by the same rules as always:
-bouncing off walls, clearing bricks, and obeying the laws of physics.
-
-The only part of the implementation that does require some explanation is the problem of checking to see 
-whether the ball has collided with a brick or the paddle. The easiest strategy to adopt 
-is to call getElemntAt(x,y), which returns the object that covers the point (x,y) on the canvas.
-
-Given the ball is not a single point, it is not sufficient to check only the coordinates of the center. In this program, 
-the simplest strategy is to check the four corner points on the square in which the ball is inscribed. The fact that an Ellipse
-is defined in terms of its bounding rectangle means that if the upper left corner of the ball is at point (x,y), the other corners will be at the locations
-shown in this diagram:
-
-![Diagram of ball corner positions](./corners.png)
-
-These points have the advantage of being outside the ball -- which means that getElementAt can't return the ball itself. Thus,
-for each of the four corners, you need to call getElementAt on that location to see whether anything is there. If the value you get back 
-is not null, you have a collision with either a brick or the paddle. 
-
