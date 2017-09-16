@@ -1,4 +1,4 @@
-COMP 124 HW 5:  Breakout!
+Breakout!
 ==========================
 
 For this homework assignment, you will write a program to play the classic arcade game of Breakout, which
@@ -53,27 +53,4 @@ shown in this diagram:
 These points have the advantage of being outside the ball -- which means that getElementAt can't return the ball itself. Thus,
 for each of the four corners, you need to call getElementAt on that location to see whether anything is there. If the value you get back 
 is not null, you have a collision with either a brick or the paddle. 
-
-We expect you to decompose your program using at least three Graphics components in addition to the BreakoutProgram. You also need to practice good method decomposition to avoid code duplication and keep your methods short with a single clear purpose.
-
-### Due Dates
-This homework will have two milestones:
-
-* Part 1 **(Due Monday, October 24th)**: For this milestone you only need to draw the graphical objects on the screen and have the ball animate. Your ball should be able to reflect off of walls, but does not need to test for intersections with bricks objects or the paddle.
-* Part 2 **(Due Monday, October 31st)**: For this milestone you should commit and push the completed assignment. The ball should be able to bounce off of the paddle and intersect bricks. The paddle should be able to move with the mouse or keyboard. The game should end when all the bricks disappear or the player loses three lives. 
-
-Please make sure to follow the guidelines for [good java style](https://docs.google.com/a/macalester.edu/document/d/1YpCzhKhYy5JUQ6oCGJZdf92a0jjpmjMxfKfhPkFl5As/edit?usp=sharing) that we have shared with you in the past. Because this program is entirely graphical, you do not need to write JUnit tests; however, you should make sure you test thoroughly by playing the game.
-
-To receive full credit, you must have:
-* Good class decomposition
-* Good method decomposition
-* Correct Execution:
-  * Ball/Brick Intersections
-  * Win/Lose Logic
-  * Ball/Wall Intersections
-  * Ball/Paddle Intersections
-* Correct Style
-
-### Attribution
-This assignment and the text for its description come from The Art and Science of Java by Eric Roberts.
 
